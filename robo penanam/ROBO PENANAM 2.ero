@@ -1,0 +1,70 @@
+#include "functions_codes.h" 
+
+void main(void){ 
+    mcu_initialization();
+Label_0:
+    while(1){
+    Label_1:
+        if(rc(UP_KEY) == TRUE){
+        Label_2:
+            dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
+            dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10);
+        Label_3:
+            delay(0, 0, 0, 10);
+        Label_4:
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+            
+        }
+    Label_6:
+        if(rc(DOWN_KEY) == TRUE){
+        Label_7:
+            dc_motor(LEFT_MOTOR_1, BACKWARD_DIRECTION, -10);
+            dc_motor(RIGHT_MOTOR_1, BACKWARD_DIRECTION, -10);
+        Label_8:
+            delay(0, 0, 0, 10);
+        Label_9:
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+            
+        }
+    Label_11:
+        if(rc(LEFT_KEY) == TRUE){
+        Label_12:
+            dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
+            dc_motor(RIGHT_MOTOR_1, BACKWARD_DIRECTION, -10);
+        Label_13:
+            delay(0, 0, 0, 10);
+        Label_14:
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+            
+        }
+    Label_16:
+        if(rc(RIGHT_KEY) == TRUE){
+        Label_17:
+            dc_motor(LEFT_MOTOR_1, BACKWARD_DIRECTION, -10);
+            dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10);
+        Label_18:
+            delay(0, 0, 0, 10);
+        Label_19:
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+            
+        }
+    Label_21:
+        if(rc(F4_KEY) == TRUE){
+        Label_22:
+            delay(0, 0, 4, 300);
+        Label_23:
+            dc_motor(LEFT_MOTOR_1, FORWARD_DIRECTION, 10);
+            dc_motor(RIGHT_MOTOR_1, FORWARD_DIRECTION, 10);
+        Label_24:
+            delay(0, 0, 1, 200);
+        Label_25:
+            dc_motor(LEFT_MOTOR_1, STOP_DIRECTION, 0);
+            dc_motor(RIGHT_MOTOR_1, STOP_DIRECTION, 0);
+            
+        }
+    }
+}
